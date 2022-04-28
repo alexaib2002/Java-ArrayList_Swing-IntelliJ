@@ -70,8 +70,9 @@ public class MainWindow extends JFrame {
 
     private void initWindowAttributes() {
         setVisible(true);
-        updateWindowSize();
         setContentPane(contentPane);
+        mainViewPanel.setViewportView(new TitleScreen().getRoot());
+        updateWindowSize();
         setMinimumSize(new Dimension(getMinimumSize()));
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
