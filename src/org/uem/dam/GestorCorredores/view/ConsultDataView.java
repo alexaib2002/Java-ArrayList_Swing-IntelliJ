@@ -9,6 +9,10 @@ public class ConsultDataView implements SubMenu {
     private JTable displayTable;
     private JPanel consultDataViewPanel;
     private JButton updateBtn;
+    private JRadioButton hombreRadioButton;
+    private JRadioButton mujerRadioButton;
+    private JRadioButton ambosRadioButton;
+    private ButtonGroup filterBtnGroup;
 
     public JButton getUpdateDataBtn() {
         return updateBtn;
@@ -27,9 +31,20 @@ public class ConsultDataView implements SubMenu {
         tableModel.addColumn("Sexo");
         tableModel.addColumn("Edad");
         tableModel.addColumn("Modalidad");
+        hombreRadioButton = new JRadioButton();
+        hombreRadioButton.setActionCommand("Hombre");
+        mujerRadioButton = new JRadioButton();
+        mujerRadioButton.setActionCommand("Mujer");
+        ambosRadioButton = new JRadioButton();
+        ambosRadioButton.setActionCommand("Ambos");
+        ambosRadioButton.setSelected(true);
     }
 
     public JTable getDisplayTable() {
         return displayTable;
+    }
+
+    public ButtonGroup getFilterBtnGroup() {
+        return filterBtnGroup;
     }
 }

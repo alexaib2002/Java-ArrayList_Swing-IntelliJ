@@ -2,12 +2,12 @@ package org.uem.dam.GestorCorredores.model;
 
 public class Corredor {
     final String nombre;
-    final String dorsal;
+    final int dorsal;
     final String modalidad;
     final boolean sexo;
     final int edad;
 
-    public Corredor(String nombre, String dorsal, String modalidad, boolean sexo, int edad) {
+    public Corredor(String nombre, int dorsal, String modalidad, boolean sexo, int edad) {
         this.nombre = nombre;
         this.dorsal = dorsal;
         this.modalidad = modalidad;
@@ -19,7 +19,7 @@ public class Corredor {
         return nombre;
     }
 
-    public String getDorsal() {
+    public int getDorsal() {
         return dorsal;
     }
 
