@@ -117,4 +117,10 @@
       </component>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="sexBtnGroup" bound="true">
+      <member id="fe6d"/>
+      <member id="739f8"/>
+    </group>
+  </buttonGroups>
 </form>
