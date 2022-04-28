@@ -1,7 +1,6 @@
 package org.uem.dam.GestorCorredores.controller;
 
 import org.uem.dam.GestorCorredores.model.Corredor;
-import org.uem.dam.GestorCorredores.view.ConsultDataView;
 import org.uem.dam.GestorCorredores.view.InsertDataView;
 import org.uem.dam.GestorCorredores.view.MainWindow;
 
@@ -11,13 +10,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Objects;
 
 
 public class SystemController implements ActionListener {
 
-    private ArrayList<Corredor> corrList;
-    private static MainWindow mainWindow;
+    private final ArrayList<Corredor> corrList;
+    private final MainWindow mainWindow;
 
     public SystemController(MainWindow mainWindow) {
         this.mainWindow = mainWindow;
@@ -54,7 +53,7 @@ public class SystemController implements ActionListener {
             corrList.add(new Corredor(
                     insertDataView.getNomTxtField().getText(),
                     insertDataView.getDorTxtField().getText(),
-                    insertDataView.getModCBox().getSelectedItem().toString(),
+                    (String) insertDataView.getModCBox().getSelectedItem(),
                     insertDataView.getFmRdBtn().isSelected(),
                     (Integer) insertDataView.getAgeSpn().getValue()
             ));

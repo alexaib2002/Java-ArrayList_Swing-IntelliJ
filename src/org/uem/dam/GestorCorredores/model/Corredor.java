@@ -1,9 +1,11 @@
 package org.uem.dam.GestorCorredores.model;
 
 public class Corredor {
-    String nombre, dorsal, modalidad;
-    boolean sexo;
-    int edad;
+    final String nombre;
+    final String dorsal;
+    final String modalidad;
+    final boolean sexo;
+    final int edad;
 
     public Corredor(String nombre, String dorsal, String modalidad, boolean sexo, int edad) {
         this.nombre = nombre;

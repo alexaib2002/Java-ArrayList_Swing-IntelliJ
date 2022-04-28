@@ -16,15 +16,12 @@ public class MainWindow extends JFrame {
     private InsertDataView insertDataView;
     private ConsultDataView consultDataView;
 
-    private SystemController controller;
-
     public MainWindow() {
         initWindowAttributes();
         initSubMenuViews();
     }
 
     public void setController(SystemController controller) {
-        this.controller = controller;
         conCorrMnItm.addActionListener(controller);
         intCorrMnItm.addActionListener(controller);
         salMnItm.addActionListener(controller);
